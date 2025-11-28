@@ -71,6 +71,27 @@ public finderMap(String mapString) {
         System.arraycopy(rowChars, 0, this.map[r], 0, cols);
     }
 }
+    public int[] getStartOrEnd(char c) {
+        int[] position = {0,0};
+        for (int i = 0; i < map.length; ++i) {
+            for (int j = 0; j < map[i].length; ++j) {
+                if (c == 's') {
+                    if(map[i][j] == '#') {
+                        position[0] = i;
+                        position[1] = j;
+                        return position;
+                    }
+                } else if (c == 'e') {
+                    if(map[i][j] == '!') {
+                        position[0] = i;
+                        position[1] = j;
+                        return position;
+                    }
+                }
+            }
+        }
+        return position;
+    }
 
     // ** Spec methods of goal 1 ** 
 

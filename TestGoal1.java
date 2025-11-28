@@ -6,10 +6,11 @@ public class TestGoal1 {
     public static void main(String[] args) throws IOException {
         if (args.length != 1) {
             System.out.println("Usage: java TestGoal1 datafile.txt");
-            return;
+            //return;
         }
 
-        String contents = Files.readString(Path.of(args[0]));
+        //String contents = Files.readString(Path.of(args[0]));
+        String contents = Files.readString(Path.of("datafile.txt"));
         finderMap fm = new finderMap(contents);
 
         System.out.println("=== Loaded Map ===");
