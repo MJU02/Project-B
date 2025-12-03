@@ -131,7 +131,7 @@ public class finderMap {
                     }
                     cost[r][c] = v;
                 }
-                step[r][c] = 0; // unvisited
+                step[r][c] = 0; // mens unvisited
             }
         }
     }
